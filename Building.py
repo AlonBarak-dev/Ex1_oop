@@ -1,5 +1,6 @@
 import json
 
+from Calls import Calls
 from Elevator import Elevator
 
 
@@ -8,21 +9,17 @@ class Building:
     def __init__(self, filename):
         f = open(filename)
         data = json.load(f)
-        self._minFloor = data['_minFloor']
-        self._maxFloor = data['_maxFloor']
-        self._elevators = []
+        self.minFloor = data['_minFloor']
+        self.maxFloor = data['_maxFloor']
+        self.elevators = []
         for elev in data["_elevators"]:
             elevator = Elevator(elev)
-            self._elevators.append(elevator)
-        self._numberOfElevators = len(self._elevators)
+            self.elevators.append(elevator)
+        self.numberOfElevators = len(self.elevators)
+        self.calls = []
 
-
-    """
-    def __str__(self):
-        elevStr = ()
-        for i in self._elevators:
-            elevStr.__add__(i.__str__())
-
-        string = "minFloor: ", self._minFloor, " maxFloor: ", self._maxFloor, " numberOfElevators: ", self.numberOfElevators
-        print(string , elevStr )
-    """
+    def output(self, call : Calls):
+        out = ["Elevator call", call.time, call.source, call.destination, call.state]
+        elev_number = call.allocate(self)
+        out.append(elev_number)
+        out.append("Done")
