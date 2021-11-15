@@ -1,7 +1,8 @@
 import csv
 from Building import Building
 from Calls import Calls
-
+import os
+import sys
 
 def json_Build(pathJson):
     return Building(pathJson)
@@ -27,10 +28,22 @@ def csv_Writer(pathCsvW):
 
 
 if __name__ == '__main__':
-    pathJson = "files/Ex1_Buildings/B5.json"
+    """
+    pathJson = "files/Ex1_Buildings/B4.json"
     building = json_Build(pathJson)
-    pathCsv = "files/Ex1_Calls/Calls_b.csv"
+    pathCsv =  "files/Ex1_Calls/Calls_b.csv"
     csv_Build(pathCsv)
-    pathCsvOut = "files/Ex1_Output/Ex1_Calls_case_5_b.csv"
+    pathCsvOut = "files/Ex1_Output/Ex1_Calls_case_4_b.csv"
     csv_Writer(pathCsvOut)
+    print("done")
+    """
 
+    jsonFile = sys.argv[1]
+    pathJson = os.path.basename(jsonFile)
+    building = json_Build(pathJson)
+    csvInputFile = sys.argv[2]
+    pathCsv = os.path.basename(csvInputFile)
+    csv_Build(pathCsv)
+    csvOutputFile = sys.argv[3]
+    pathCsvOut = os.path.basename(csvOutputFile)
+    csv_Writer(pathCsvOut)
