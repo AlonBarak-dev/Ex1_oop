@@ -27,6 +27,8 @@ class Building:
                 longest = road
         return longest
 
+    def getElev(self, elev : Elevator) -> int:
+        return elev.id
 
     def output(self, call : Calls):
         out = ["Elevator call", call.time, call.source, call.destination, call.state]

@@ -19,13 +19,13 @@ class Calls:
 
 
     def allocate(self, building : Building, numOfFloors):
-        range = int(numOfFloors / (building.numberOfElevators))
+        range = int(numOfFloors / (building.numberOfElevators)) + 1
         roadLength = abs(self.source - self.destination)
         elevatorId = int(roadLength / range)
         if elevatorId >= building.numberOfElevators:
             elevatorId = building.numberOfElevators - 1
-        self.allocateTo = elevatorId
-        return elevatorId
+        self.allocateTo = building.getElev(building.elevators[elevatorId])        # CHANGED RETURNED VALUE
+        return self.allocateTo
 
 
 

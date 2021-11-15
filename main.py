@@ -27,10 +27,10 @@ def csv_Writer(pathCsvW):
 
 
 if __name__ == '__main__':
-    pathJson = "files/Ex1_Buildings/B2.json"
+    pathJson = "files/Ex1_Buildings/B5.json"
     building = json_Build(pathJson)
-    pathCsv = "files/Ex1_Calls/Calls_a.csv"
+    pathCsv = "files/Ex1_Calls/Calls_b.csv"
     csv_Build(pathCsv)
-    pathCsvOut = "files/Ex1_Output/Ex1_Calls_case_2_a.csv"
+    pathCsvOut = "files/Ex1_Output/Ex1_Calls_case_5_b.csv"
     csv_Writer(pathCsvOut)
 
