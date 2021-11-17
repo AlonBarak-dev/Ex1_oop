@@ -12,10 +12,7 @@ class Calls:
         self.destination = int(data[3])
         self.state = int(data[4])
         self.allocateTo = -1  # default value
-        if self.source > self.destination:
-            self.direction = 1      # down
-        else:
-            self.direction = 2      # up
+
 
 
     def allocate(self, building : Building, numOfFloors):

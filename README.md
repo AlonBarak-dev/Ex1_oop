@@ -39,3 +39,7 @@ The output will arrive as the same file as the Calls file but with scheduling re
 | Calls b      |        |          | 454.34 |184.43  |68.88   |
 | Calls c      |        |          | 451.22 |182.21  |61.18   |
 | Calls d      |        |          | 432.83 |177.45  |64.04   |
+
+
+##<br> UML Diagram:
+![img.png](img.png)

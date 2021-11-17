@@ -1,0 +1,66 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class Building{
+maxFloor: int
+minFloor: int
+elevators: Elevator[]
+numOfElevators: int
+calls: Calls[]
+
++findMaxRoad()
++output(call:Calls)
++getElev(elev: Elevator)
+}
+
+class Elevator{
+id: int
+speed: float
+minFloor: int
+maxFloor: int
+closeTime: float
+openTime: float
+startTime: float
+stopTime: float
+listOfCalls: Calls[]
+time: int
+
++getCall(call:Calls)
+}
+
+class Calls{
+text:
+time:
+source:
+destination:
+_state:
+allocateTo:
+
++allocate(building:Building, numOfFloors: int)
+}
+
+class Ex1{
+jsonFile: string
+pathJson: string
+building: Building
+csvInputFile: string
+pathCsv: string
+csvOutputFile:string
+pathCsvOut: string
+
++json_Build(pathJson: string)
++csv_Build(pathCsv: string)
++csv_Writer(pathCsvW: string)
+}
+
+
+Building <- Ex1
+Elevator <- Building
+Calls <-- Building
+Calls <---- Elevator
+Calls <--- Ex1
+
+
+@enduml
