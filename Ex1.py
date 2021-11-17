@@ -31,9 +31,9 @@ if __name__ == '__main__':
     """
     pathJson = "files/Ex1_Buildings/B5.json"
     building = json_Build(pathJson)
-    pathCsv =  "files/Ex1_Calls/Calls_c.csv"
+    pathCsv =  "files/Ex1_Calls/Calls_d.csv"
     csv_Build(pathCsv)
-    pathCsvOut = "files/Ex1_Output/Ex1_Calls_case_5_c.csv"
+    pathCsvOut = "files/Ex1_Output/Ex1_Calls_case_5_d.csv"
     csv_Writer(pathCsvOut)
     print("done")
     """
