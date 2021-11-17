@@ -42,4 +42,8 @@ The output will arrive as the same file as the Calls file but with scheduling re
 
 
 
+<<<<<<< HEAD
 ![img_2.png](img_2.png)
+=======
+![img.png](img.png)
+>>>>>>> 5df1d610ca43945ff5fafc27cb2b2cc25f55bd6c
