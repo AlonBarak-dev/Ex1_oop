@@ -1,7 +1,10 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-
+interface json
+interface csv
+interface os
+interface sys
 
 class Building{
 maxFloor: int
@@ -62,5 +65,10 @@ Calls <-- Building
 Calls <---- Elevator
 Calls <--- Ex1
 
+Ex1 <|..json
+Ex1 <|..csv
+Ex1 <|..os
+Ex1 <|..sys
+Building <|..json
 
 @enduml

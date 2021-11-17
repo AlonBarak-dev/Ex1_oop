@@ -41,5 +41,5 @@ The output will arrive as the same file as the Calls file but with scheduling re
 | Calls d      |        |          | 432.83 |177.45  |64.04   |
 
 
-##<br> UML Diagram:
-![img.png](img.png)
+
+![img_2.png](img_2.png)
