@@ -33,6 +33,8 @@ The output will arrive as the same file as the Calls file but with scheduling re
 <br>4.3	We'll return the ID of the chosen elevator.
 5.	Repeat the process for each call that left.
 
+### Table of averege waiting time 
+
 |Calls/Building|B1     |B2        |B3      |B4      |B5      |
 |--------------|--------|----------|--------|--------|--------|
 | Calls a      |112.92  | 50.64    | 28.71  |20.9    |15.66   |
